@@ -1,12 +1,13 @@
-import Keyboard from 'qmkv/app/components/keyboard'
-import { lilly58 } from 'qmkv/layouts/lilly58'
+import Control from 'qmkv/app/components/control'
+
+const data = await import('qmkv/layouts/lilly58/default.json')
 
 export default function HomePage() {
+  console.log(data.default)
+
   return (
     <main className='flex min-h-screen flex-col items-center justify-center text-white'>
-      <div className='container flex flex-col items-center justify-center'>
-        <Keyboard layout={lilly58} />
-      </div>
+      <Control data={data.default} />
     </main>
   )
 }

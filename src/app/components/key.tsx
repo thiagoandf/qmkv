@@ -1,16 +1,18 @@
 import clsx from 'clsx'
+import { qmkToReadableKeycodeMapping } from 'qmkv/app/const/qmkToReadable'
 import { type Key } from 'qmkv/types/key'
 
 type Props = {
   singleKey: Key
+  keyValue: string | undefined
 }
 
-export default function Key({ singleKey }: Props) {
+export default function Key({ singleKey, keyValue }: Props) {
   let content = null
   let size = 'w-24 h-24'
 
   if (!singleKey.blank) {
-    content = singleKey.type
+    content = keyValue
   }
 
   switch (singleKey.type) {
@@ -33,8 +35,13 @@ export default function Key({ singleKey }: Props) {
       break
   }
 
+  if (content && qmkToReadableKeycodeMapping[content]) {
+    content = qmkToReadableKeycodeMapping[content]
+  }
+
   return (
-    <div
+    <button
+      disabled={singleKey.blank}
       className={clsx(
         'flex items-center justify-center rounded-lg border',
         singleKey.blank ? 'border-transparent' : 'border-white',
@@ -42,6 +49,6 @@ export default function Key({ singleKey }: Props) {
       )}
     >
       {content}
-    </div>
+    </button>
   )
 }
