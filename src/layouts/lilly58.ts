@@ -1,4 +1,6 @@
-export const lilly58 = [
+import { type Layout } from "qmkv/types/key";
+
+export const lilly58: Layout =[
   // Row 1 - 12 keys
   [
     {
@@ -18,6 +20,10 @@ export const lilly58 = [
     },
     {
       type: "1u",
+    },
+    {
+      type: "3u",
+      blank: true,
     },
     {
       type: "1u",
@@ -57,6 +63,10 @@ export const lilly58 = [
     },
     {
       type: "1u",
+    },
+    {
+      type: "3u",
+      blank: true,
     },
     {
       type: "1u",
@@ -99,6 +109,11 @@ export const lilly58 = [
     },
     {
       type: "1u",
+    },
+
+    {
+      type: "1u",
+      blank: true,
     },
     {
       type: "1u",
@@ -144,6 +159,10 @@ export const lilly58 = [
       type: "1u",
     },
     {
+      type: "3u",
+      blank: true,
+    },
+    {
       type: "1u",
     },
     {
@@ -165,13 +184,16 @@ export const lilly58 = [
   // Row 5 - 8 keys
   [
     {
-      type: "blank",
+      type: "1u",
+      blank: true,
     },
     {
-      type: "blank",
+      type: "1u",
+      blank: true,
     },
     {
-      type: "blank",
+      type: "1u",
+      blank: true,
     },
     {
       type: "1u",
@@ -186,6 +208,10 @@ export const lilly58 = [
       type: "1.5u",
     },
     {
+      type: "2u",
+      blank: true,
+    },
+    {
       type: "1.5u",
     },
     {
@@ -198,13 +224,16 @@ export const lilly58 = [
       type: "1u",
     },
     {
-      type: "blank",
+      type: "1u",
+      blank: true,
     },
     {
-      type: "blank",
+      type: "1u",
+      blank: true,
     },
     {
-      type: "blank",
+      type: "1u",
+      blank: true,
     },
   ]
 ]
